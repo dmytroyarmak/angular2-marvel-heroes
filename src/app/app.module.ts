@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { routing, appRoutingProviders} from './app.routing';
 import { CharactersListComponent } from './characters-list/characters-list.component';
 import { CharactersService } from './shared';
+import { CharactersListItemComponent } from './characters-list-item/characters-list-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharactersListComponent
+    CharactersListComponent,
+    CharactersListItemComponent
   ],
   imports: [
     BrowserModule,

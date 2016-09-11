@@ -1,2 +1,9 @@
-<h2>Characters List</h2>
-<pre>{{ characters | json }}</pre>
+<h2 class="mh-subtitle">Characters List</h2>
+
+<div *ngIf="characters" class="mh-cards-list">
+    <characters-list-item 
+        *ngFor="let character of characters.data.results" 
+        [character]="character"
+        class="mh-cards-list__item"
+    ></characters-list-item>
+</div>

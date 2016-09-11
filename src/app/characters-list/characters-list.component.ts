@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CharactersService } from '../shared/services/characters.service';
+import { CharactersListItemComponent } from '../characters-list-item/characters-list-item.component';
 
 @Component({
-  selector: 'app-characters-list',
+  selector: 'characters-list',
   templateUrl: './characters-list.component.html',
-  styleUrls: ['./characters-list.component.sass']
+  styleUrls: ['./characters-list.component.sass'],
+  directives: [CharactersListItemComponent]
 })
 export class CharactersListComponent implements OnInit {
   characters: any;
