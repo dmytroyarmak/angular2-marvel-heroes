@@ -8,12 +8,14 @@ import { routing, appRoutingProviders} from './app.routing';
 import { CharactersListComponent } from './characters-list/characters-list.component';
 import { CharactersService } from './shared';
 import { CharactersListItemComponent } from './characters-list-item/characters-list-item.component';
+import { UltimatePaginationComponent } from './shared/components/ultimate-pagination/ultimate-pagination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersListComponent,
-    CharactersListItemComponent
+    CharactersListItemComponent,
+    UltimatePaginationComponent
   ],
   imports: [
     BrowserModule,

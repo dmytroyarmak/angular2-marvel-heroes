@@ -7,3 +7,10 @@
         class="mh-cards-list__item"
     ></characters-list-item>
 </div>
+
+<ultimate-pagination
+    *ngIf="getTotalPages()"
+    [currentPage]="currentPage"
+    [totalPages]="getTotalPages()"
+    (onChange)="onChangePage($event)"
+></ultimate-pagination>
