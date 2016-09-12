@@ -1,22 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
 
+export interface IGetCharactersOptions {
+  page: number;
+  perPage: number;
+}
+
 @Injectable()
 export class CharactersService {
 
   constructor(private http: Http) { }
 
-  getCharacters() {
+  getCharacters(options: IGetCharactersOptions) {
     // TODO: Move to global constants/config
     return this.http.get('http://gateway.marvel.com/v1/public/characters', {
-      search: this.getCharactersSearchParams()
+      search: this.getCharactersSearchParams(options)
     }).map(responce => responce.json());
   }
 
-  private getCharactersSearchParams() {
-    // TODO: Add API key globally for all requests to Marvel Comics API
+  private getCharactersSearchParams(options: IGetCharactersOptions) {
     let charactersSearchParams = new URLSearchParams();
+    // TODO: Add API key globally for all requests to Marvel Comics API
     charactersSearchParams.set('apikey', 'e82e1f8eb16da85c0260676f2cdb05b2');
+    charactersSearchParams.set('limit', String(options.perPage));
+    charactersSearchParams.set('offset', String(options.perPage * (options.page - 1)));
     return charactersSearchParams;
   }
 }
