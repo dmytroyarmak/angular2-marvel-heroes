@@ -14,6 +14,7 @@ import { UltimatePaginationComponent } from '../shared/components/ultimate-pagin
 })
 export class CharactersListComponent implements OnInit {
   characters: any;
+  nameStartsWith = '';
   currentPage: number = 1;
   itemsPerPage: number = 20;
 
@@ -36,11 +37,17 @@ export class CharactersListComponent implements OnInit {
     this.loadCharactersList();
   }
 
+  onSearch(val) {
+    this.nameStartsWith = val;
+    this.loadCharactersList();
+  }
+
   loadCharactersList() {
     this.charactersService
       .getCharacters({
         page: this.currentPage,
-        perPage: this.itemsPerPage
+        perPage: this.itemsPerPage,
+        nameStartsWith: this.nameStartsWith
       })
       .subscribe((characters) => {
         this.characters = characters;

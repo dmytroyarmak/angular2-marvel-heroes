@@ -4,6 +4,7 @@ import { Http, URLSearchParams } from '@angular/http';
 export interface IGetCharactersOptions {
   page: number;
   perPage: number;
+  nameStartsWith: string;
 }
 
 @Injectable()
@@ -24,6 +25,9 @@ export class CharactersService {
     charactersSearchParams.set('apikey', 'e82e1f8eb16da85c0260676f2cdb05b2');
     charactersSearchParams.set('limit', String(options.perPage));
     charactersSearchParams.set('offset', String(options.perPage * (options.page - 1)));
+    if (options.nameStartsWith) {
+      charactersSearchParams.set('nameStartsWith', options.nameStartsWith);
+    }
     return charactersSearchParams;
   }
 }

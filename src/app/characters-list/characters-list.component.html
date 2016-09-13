@@ -1,5 +1,12 @@
 <h2 class="mh-subtitle">Characters List</h2>
 
+<div class="mh-search-container">
+    <form (submit)="onSearch(nameInput.value)">
+        <input type="text" #nameInput [value]="nameStartsWith">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
 <div *ngIf="characters" class="mh-cards-list">
     <characters-list-item 
         *ngFor="let character of characters.data.results" 
