@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 export interface IGetCharactersOptions {
   page: number;

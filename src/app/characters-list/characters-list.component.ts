@@ -1,16 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CharactersService } from '../shared/services/characters.service';
-import { CharactersListItemComponent } from '../characters-list-item/characters-list-item.component';
-import { UltimatePaginationComponent } from '../shared/components/ultimate-pagination/ultimate-pagination.component';
 
 @Component({
   selector: 'characters-list',
   templateUrl: './characters-list.component.html',
-  styleUrls: ['./characters-list.component.sass'],
-  directives: [
-    CharactersListItemComponent,
-    UltimatePaginationComponent
-  ]
+  styleUrls: ['./characters-list.component.sass']
 })
 export class CharactersListComponent implements OnInit {
   characters: any;
