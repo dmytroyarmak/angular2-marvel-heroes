@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'characters-list-item',
-  templateUrl: './characters-list-item.component.html',
-  styleUrls: ['./characters-list-item.component.sass']
+  selector: 'character-thumbnail',
+  templateUrl: './character-thumbnail.component.html',
+  styleUrls: ['./character-thumbnail.component.sass']
 })
-export class CharactersListItemComponent implements OnInit {
+export class CharacterThumbnailComponent implements OnInit {
   @Input() character;
 
   constructor() { }

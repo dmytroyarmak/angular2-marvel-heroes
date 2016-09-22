@@ -5,17 +5,21 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders} from './app.routing';
-import { CharactersListComponent } from './characters-list/characters-list.component';
 import { CharactersService } from './shared';
-import { CharactersListItemComponent } from './characters-list-item/characters-list-item.component';
+import { CharactersListComponent } from './characters-list/characters-list.component';
+import { CharacterDetailsComponent } from './character-details/character-details.component';
+import { CharactersListItemComponent } from './shared/components/characters-list-item/characters-list-item.component';
 import { UltimatePaginationComponent } from './shared/components/ultimate-pagination/ultimate-pagination.component';
+import { CharacterThumbnailComponent } from './shared/components/character-thumbnail/character-thumbnail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersListComponent,
     CharactersListItemComponent,
-    UltimatePaginationComponent
+    CharacterDetailsComponent,
+    UltimatePaginationComponent,
+    CharacterThumbnailComponent
   ],
   imports: [
     BrowserModule,

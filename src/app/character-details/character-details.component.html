@@ -1,0 +1,19 @@
+<a routerLink="/characters">&lt; Back to all characters</a>
+
+<div *ngIf="character">
+  <h2>{{character.name}}</h2>
+
+  <div class="md-thumbnail-container">
+    <character-thumbnail [character]="character"></character-thumbnail>
+  </div>
+
+  <div *ngIf="character.description">
+    <h3>Description</h3>
+    <p>{{character.description}}</p>
+  </div>
+
+  <h3>Links</h3>
+  <ul>
+    <li *ngFor="let link of character.urls"><a [href]="link.url">{{link.type}}</a></li>
+  </ul>
+</div>
