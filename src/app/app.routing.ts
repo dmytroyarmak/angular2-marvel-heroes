@@ -4,8 +4,9 @@ import { CharactersListComponent } from './characters-list/characters-list.compo
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 
 const appRoutes: Routes = [
+  { path: '', redirectTo: '/characters', pathMatch: 'full' },
   { path: 'characters', component: CharactersListComponent },
-  { path: 'characters/:id', component: CharacterDetailsComponent}
+  { path: 'characters/:id', component: CharacterDetailsComponent }
 ];
 
 export const appRoutingProviders: any[] = [
