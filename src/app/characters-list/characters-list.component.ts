@@ -4,7 +4,7 @@ import { CharactersService } from '../shared/services/characters.service';
 @Component({
   selector: 'characters-list',
   templateUrl: './characters-list.component.html',
-  styleUrls: ['./characters-list.component.sass']
+  styleUrls: ['./characters-list.component.css']
 })
 export class CharactersListComponent implements OnInit {
   characters: any;

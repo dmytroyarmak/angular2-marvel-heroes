@@ -8,11 +8,11 @@ import { CharactersService } from '../shared/services/characters.service';
 @Component({
   selector: 'character-details',
   templateUrl: './character-details.component.html',
-  styleUrls: ['./character-details.component.sass']
+  styleUrls: ['./character-details.component.css']
 })
 export class CharacterDetailsComponent implements OnInit {
   character;
-  
+
   constructor(private activatedRoute: ActivatedRoute, private charactersService: CharactersService) { }
 
   ngOnInit() {

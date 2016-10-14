@@ -12,10 +12,10 @@
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "app",
+      "prefix": "",
       "mobile": false,
       "styles": [
-        "styles.sass"
+        "styles.css"
       ],
       "scripts": [],
       "environments": {
@@ -38,7 +38,7 @@
     }
   },
   "defaults": {
-    "styleExt": "sass",
+    "styleExt": "css",
     "prefixInterfaces": false
   }
 }

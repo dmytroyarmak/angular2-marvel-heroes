@@ -4,7 +4,7 @@ import { getPaginationModel, ITEM_TYPES } from 'ultimate-pagination';
 @Component({
   selector: 'ultimate-pagination',
   templateUrl: './ultimate-pagination.component.html',
-  styleUrls: ['./ultimate-pagination.component.sass']
+  styleUrls: ['./ultimate-pagination.component.css']
 })
 export class UltimatePaginationComponent implements OnInit {
   @Input() currentPage;
