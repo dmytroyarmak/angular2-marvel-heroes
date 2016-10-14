@@ -11,6 +11,7 @@ import { CharacterDetailsComponent } from './character-details/character-details
 import { CharactersListItemComponent } from './shared/components/characters-list-item/characters-list-item.component';
 import { UltimatePaginationComponent } from './shared/components/ultimate-pagination/ultimate-pagination.component';
 import { CharacterThumbnailComponent } from './shared/components/character-thumbnail/character-thumbnail.component';
+import { AssociatedItemsComponent } from './shared/components/associated-items/associated-items.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CharacterThumbnailComponent } from './shared/components/character-thumb
     CharactersListItemComponent,
     CharacterDetailsComponent,
     UltimatePaginationComponent,
-    CharacterThumbnailComponent
+    CharacterThumbnailComponent,
+    AssociatedItemsComponent
   ],
   imports: [
     BrowserModule,
