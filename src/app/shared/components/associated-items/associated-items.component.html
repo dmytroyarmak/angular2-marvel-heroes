@@ -1,7 +1,10 @@
 <div *ngIf="collection?.available">
   <h3>{{title}} ({{collection.available}})</h3>
   <ul>
-    <li *ngFor="let item of collection.items">{{item.name}}</li>
+    <li *ngFor="let item of collection.items">
+      <a *ngIf="basePath" [routerLink]="getRoutePath(item)">{{item.name}}</a>
+      <template [ngIf]="!basePath">{{item.name}}</template>
+    </li>
     <li *ngIf="collection.returned < collection.available">...</li>
   </ul>
 </div>
