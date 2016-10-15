@@ -12,7 +12,7 @@
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "",
+      "prefix": "mh",
       "mobile": false,
       "styles": [
         "styles.css"

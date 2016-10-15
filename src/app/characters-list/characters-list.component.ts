@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CharactersService } from '../shared/services/characters.service';
 
 @Component({
-  selector: 'characters-list',
+  selector: 'mh-characters-list',
   templateUrl: './characters-list.component.html',
   styleUrls: ['./characters-list.component.css']
 })

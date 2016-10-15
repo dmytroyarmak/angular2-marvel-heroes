@@ -4,12 +4,12 @@
   <h2>{{comic.title}}</h2>
 
   <div class="md-thumbnail-container">
-    <thumbnail
+    <mh-thumbnail
       *ngFor="let image of comic.images"
       [image]="image"
       alt="Thumbnail of {{comic.title}}"
       class="md-thumbnail-item"
-    ></thumbnail>
+    ></mh-thumbnail>
   </div>
 
   <div *ngIf="comic.description">
@@ -17,7 +17,7 @@
     <p>{{comic.description}}</p>
   </div>
 
-  <links-list [links]="comic.urls"></links-list>
+  <mh-links-list [links]="comic.urls"></mh-links-list>
 
   <h3>Details</h3>
   <dl>
@@ -46,27 +46,27 @@
     </template>
   </dl>
 
-  <comic-dates [dates]="comic.dates"></comic-dates>
+  <mh-comic-dates [dates]="comic.dates"></mh-comic-dates>
 
-  <comic-prices [prices]="comic.prices"></comic-prices>
+  <mh-comic-prices [prices]="comic.prices"></mh-comic-prices>
 
-  <comic-creators [creators]="comic.creators"></comic-creators>
+  <mh-comic-creators [creators]="comic.creators"></mh-comic-creators>
 
-  <comic-variants [variants]="comic.variants"></comic-variants>
+  <mh-comic-variants [variants]="comic.variants"></mh-comic-variants>
 
-  <associated-items
+  <mh-associated-items
     title="Stories"
     [collection]="comic.stories"
-  ></associated-items>
+  ></mh-associated-items>
 
-  <associated-items
+  <mh-associated-items
     title="Characters"
     basePath="/characters"
     [collection]="comic.characters"
-  ></associated-items>
+  ></mh-associated-items>
 
-  <associated-items
+  <mh-associated-items
     title="Events"
     [collection]="comic.events"
-  ></associated-items>
+  ></mh-associated-items>
 </div>

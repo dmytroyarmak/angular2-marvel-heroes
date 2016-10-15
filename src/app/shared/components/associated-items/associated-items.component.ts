@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'associated-items',
+  selector: 'mh-associated-items',
   templateUrl: './associated-items.component.html',
   styleUrls: ['./associated-items.component.css']
 })

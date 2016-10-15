@@ -6,7 +6,7 @@ import 'rxjs/add/operator/switchMap';
 import { ComicsService } from '../shared/services/comics.service';
 
 @Component({
-  selector: 'comic-details',
+  selector: 'mh-comic-details',
   templateUrl: './comic-details.component.html',
   styleUrls: ['./comic-details.component.css']
 })
