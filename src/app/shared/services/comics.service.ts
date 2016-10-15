@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+import { isValidDate } from '../utils';
+
 export interface IGetComicsOptions {
   page: number;
   perPage: number;
@@ -16,9 +18,17 @@ export class ComicsService {
   constructor(private http: Http) { }
 
   getComic(id) {
-    return this.http.get(ComicsService.COMICS_ENDPOINT + '/' + id, {
-      search: this.getBaseSearchParams()
-    }).map(responce => responce.json());
+    return this.http
+      .get(ComicsService.COMICS_ENDPOINT + '/' + id, {
+        search: this.getBaseSearchParams()
+      })
+      .map(responce => responce.json())
+      .map(body => body.data.results[0])
+      .map(comic => {
+        return Object.assign({}, comic, {
+          dates: comic.dates.filter(dateItem => isValidDate(dateItem.date))
+        });
+      });
   }
 
   getComics(options: IGetComicsOptions) {

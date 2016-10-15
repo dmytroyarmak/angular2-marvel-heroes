@@ -10,7 +10,7 @@ export interface IGetCharactersOptions {
 
 @Injectable()
 export class CharactersService {
-  
+
   static CHARACTERS_ENDPOINT = 'http://gateway.marvel.com/v1/public/characters';
 
   constructor(private http: Http) { }
@@ -31,7 +31,7 @@ export class CharactersService {
     let baseSearchParams = new URLSearchParams();
     // TODO: Add API key globally for all requests to Marvel Comics API
     baseSearchParams.set('apikey', 'e82e1f8eb16da85c0260676f2cdb05b2');
-    return baseSearchParams;  
+    return baseSearchParams;
   }
 
   private getCharactersSearchParams(options: IGetCharactersOptions) {
