@@ -4,7 +4,10 @@
   <h2>{{character.name}}</h2>
 
   <div class="md-thumbnail-container">
-    <character-thumbnail [character]="character"></character-thumbnail>
+    <thumbnail
+      [image]="character.thumbnail"
+      alt="Thumbnail of {{character.name}}"
+    ></thumbnail>
   </div>
 
   <div *ngIf="character.description">
@@ -12,10 +15,7 @@
     <p>{{character.description}}</p>
   </div>
 
-  <h3>Links</h3>
-  <ul>
-    <li *ngFor="let link of character.urls"><a [href]="link.url">{{link.type}}</a></li>
-  </ul>
+  <links-list [links]="character.urls"></links-list>
 
   <associated-items
     title="Comics"

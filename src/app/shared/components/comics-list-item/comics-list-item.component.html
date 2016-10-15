@@ -1,4 +1,8 @@
 <a [routerLink]="['/comics', comic.id]" class="md-card">
   <h3>{{comic.title}}</h3>
-  <comic-thumbnail [comic]="comic"></comic-thumbnail>
+
+  <thumbnail
+    [image]="comic.thumbnail"
+    alt="Thumbnail of {{comic.name}}"
+  ></thumbnail>
 </a>

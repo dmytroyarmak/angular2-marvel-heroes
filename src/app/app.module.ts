@@ -11,11 +11,16 @@ import { CharactersListComponent } from './characters-list/characters-list.compo
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { CharactersListItemComponent } from './shared/components/characters-list-item/characters-list-item.component';
 import { UltimatePaginationComponent } from './shared/components/ultimate-pagination/ultimate-pagination.component';
-import { CharacterThumbnailComponent } from './shared/components/character-thumbnail/character-thumbnail.component';
 import { AssociatedItemsComponent } from './shared/components/associated-items/associated-items.component';
 import { ComicsListComponent } from './comics-list/comics-list.component';
 import { ComicsListItemComponent } from './shared/components/comics-list-item/comics-list-item.component';
-import { ComicThumbnailComponent } from './shared/components/comic-thumbnail/comic-thumbnail.component';
+import { ThumbnailComponent } from './shared/components/thumbnail/thumbnail.component';
+import { ComicDetailsComponent } from './comic-details/comic-details.component';
+import { ComicDatesComponent } from './shared/components/comic-dates/comic-dates.component';
+import { LinksListComponent } from './shared/components/links-list/links-list.component';
+import { ComicPricesComponent } from './shared/components/comic-prices/comic-prices.component';
+import { ComicCreatorsComponent } from './shared/components/comic-creators/comic-creators.component';
+import { ComicVariantsComponent } from './shared/components/comic-variants/comic-variants.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +29,16 @@ import { ComicThumbnailComponent } from './shared/components/comic-thumbnail/com
     CharactersListItemComponent,
     CharacterDetailsComponent,
     UltimatePaginationComponent,
-    CharacterThumbnailComponent,
+    ThumbnailComponent,
     AssociatedItemsComponent,
     ComicsListComponent,
     ComicsListItemComponent,
-    ComicThumbnailComponent
+    ComicDetailsComponent,
+    ComicDatesComponent,
+    LinksListComponent,
+    ComicPricesComponent,
+    ComicCreatorsComponent,
+    ComicVariantsComponent
   ],
   imports: [
     BrowserModule,

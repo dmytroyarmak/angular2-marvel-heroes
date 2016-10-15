@@ -1,0 +1,71 @@
+<a routerLink="/comics">&lt; Back to all comics</a>
+
+<div *ngIf="comic">
+  <h2>{{comic.title}}</h2>
+
+  <div class="md-thumbnail-container">
+    <thumbnail
+      *ngFor="let image of comic.images"
+      [image]="image"
+      alt="Thumbnail of {{comic.title}}"
+      class="md-thumbnail-item"
+    ></thumbnail>
+  </div>
+
+  <div *ngIf="comic.description">
+    <h3>Description</h3>
+    <p>{{comic.description}}</p>
+  </div>
+
+  <links-list [links]="comic.urls"></links-list>
+
+  <h3>Details</h3>
+  <dl>
+    <template [ngIf]="comic.issueNumber">
+      <dt>Issue number</dt><dd>{{comic.issueNumber}}</dd>
+    </template>
+
+    <template [ngIf]="comic.upc">
+      <dt>UPC</dt><dd>{{comic.upc}}</dd>
+    </template>
+
+    <template [ngIf]="comic.diamondCode">
+      <dt>Diamond code</dt><dd>{{comic.diamondCode}}</dd>
+    </template>
+
+    <template [ngIf]="comic.pageCount">
+      <dt>Page count</dt><dd>{{comic.pageCount}}</dd>
+    </template>
+
+    <template [ngIf]="comic.series?.name">
+      <dt>Series</dt><dd>{{comic.series.name}}</dd>
+    </template>
+
+    <template [ngIf]="comic.format">
+      <dt>Format</dt><dd>{{comic.format}}</dd>
+    </template>
+  </dl>
+
+  <comic-dates [dates]="comic.dates"></comic-dates>
+
+  <comic-prices [prices]="comic.prices"></comic-prices>
+
+  <comic-creators [creators]="comic.creators"></comic-creators>
+
+  <comic-variants [variants]="comic.variants"></comic-variants>
+
+  <associated-items
+    title="Stories"
+    [collection]="comic.stories"
+  ></associated-items>
+
+  <associated-items
+    title="Characters"
+    [collection]="comic.characters"
+  ></associated-items>
+
+  <associated-items
+    title="Events"
+    [collection]="comic.events"
+  ></associated-items>
+</div>

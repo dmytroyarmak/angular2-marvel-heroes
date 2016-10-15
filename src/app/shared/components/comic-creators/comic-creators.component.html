@@ -1,0 +1,7 @@
+<div *ngIf="creators?.available">
+  <h3>Creators ({{creators.available}})</h3>
+  <ul>
+    <li *ngFor="let creator of creators.items">{{creator.name}} [{{creator.role}}]</li>
+    <li *ngIf="creators.returned < creators.available">...</li>
+  </ul>
+</div>

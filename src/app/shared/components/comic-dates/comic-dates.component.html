@@ -1,0 +1,8 @@
+<div *ngIf="dates?.length">
+  <h3>Dates</h3>
+  <dl>
+    <template ngFor let-dateItem [ngForOf]="dates">
+      <dt>{{getDateLabelByType(dateItem.type)}}</dt><dd>{{dateItem.date | date:'mediumDate'}}</dd>
+    </template>
+  </dl>
+</div>
