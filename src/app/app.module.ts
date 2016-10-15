@@ -10,7 +10,7 @@ import { ComicsService } from './shared';
 import { CharactersListComponent } from './characters-list/characters-list.component';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { CharactersListItemComponent } from './shared/components/characters-list-item/characters-list-item.component';
-import { UltimatePaginationComponent } from './shared/components/ultimate-pagination/ultimate-pagination.component';
+import { PaginationComponent } from './shared/components/pagination/pagination.component';
 import { AssociatedItemsComponent } from './shared/components/associated-items/associated-items.component';
 import { ComicsListComponent } from './comics-list/comics-list.component';
 import { ComicsListItemComponent } from './shared/components/comics-list-item/comics-list-item.component';
@@ -28,7 +28,7 @@ import { ComicVariantsComponent } from './shared/components/comic-variants/comic
     CharactersListComponent,
     CharactersListItemComponent,
     CharacterDetailsComponent,
-    UltimatePaginationComponent,
+    PaginationComponent,
     ThumbnailComponent,
     AssociatedItemsComponent,
     ComicsListComponent,

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'comic-prices',
+  selector: 'mh-comic-prices',
   templateUrl: './comic-prices.component.html',
   styleUrls: ['./comic-prices.component.css']
 })

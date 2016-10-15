@@ -8,16 +8,16 @@
 </div>
 
 <div *ngIf="comics" class="mh-cards-list">
-    <comics-list-item
+    <mh-comics-list-item
         *ngFor="let comic of comics.data.results"
         [comic]="comic"
         class="mh-cards-list__item"
-    ></comics-list-item>
+    ></mh-comics-list-item>
 </div>
 
-<ultimate-pagination
+<mh-pagination
     *ngIf="getTotalPages()"
     [currentPage]="currentPage"
     [totalPages]="getTotalPages()"
     (change)="onChangePage($event)"
-></ultimate-pagination>
+></mh-pagination>

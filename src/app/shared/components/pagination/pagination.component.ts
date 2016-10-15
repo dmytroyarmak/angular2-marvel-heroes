@@ -2,11 +2,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { getPaginationModel, ITEM_TYPES } from 'ultimate-pagination';
 
 @Component({
-  selector: 'ultimate-pagination',
-  templateUrl: './ultimate-pagination.component.html',
-  styleUrls: ['./ultimate-pagination.component.css']
+  selector: 'mh-pagination',
+  templateUrl: './pagination.component.html',
+  styleUrls: ['./pagination.component.css']
 })
-export class UltimatePaginationComponent implements OnInit {
+export class PaginationComponent implements OnInit {
   @Input() currentPage;
   @Input() totalPages;
   @Output() change = new EventEmitter();

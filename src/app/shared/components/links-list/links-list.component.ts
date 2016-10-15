@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'links-list',
+  selector: 'mh-links-list',
   templateUrl: './links-list.component.html',
   styleUrls: ['./links-list.component.css']
 })

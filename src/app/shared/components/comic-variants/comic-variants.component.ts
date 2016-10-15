@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'comic-variants',
+  selector: 'mh-comic-variants',
   templateUrl: './comic-variants.component.html',
   styleUrls: ['./comic-variants.component.css']
 })

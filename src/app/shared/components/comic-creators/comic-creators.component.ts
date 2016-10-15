@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'comic-creators',
+  selector: 'mh-comic-creators',
   templateUrl: './comic-creators.component.html',
   styleUrls: ['./comic-creators.component.css']
 })

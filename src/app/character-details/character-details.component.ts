@@ -6,7 +6,7 @@ import 'rxjs/add/operator/switchMap';
 import { CharactersService } from '../shared/services/characters.service';
 
 @Component({
-  selector: 'character-details',
+  selector: 'mh-character-details',
   templateUrl: './character-details.component.html',
   styleUrls: ['./character-details.component.css']
 })
