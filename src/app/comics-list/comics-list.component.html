@@ -1,0 +1,23 @@
+<h2 class="mh-subtitle">Comics List</h2>
+
+<div class="mh-search-container">
+    <form (submit)="onSearch(titleInput.value)">
+        <input type="text" #titleInput [value]="titleStartsWith">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<div *ngIf="comics" class="mh-cards-list">
+    <comics-list-item
+        *ngFor="let comic of comics.data.results"
+        [comic]="comic"
+        class="mh-cards-list__item"
+    ></comics-list-item>
+</div>
+
+<ultimate-pagination
+    *ngIf="getTotalPages()"
+    [currentPage]="currentPage"
+    [totalPages]="getTotalPages()"
+    (change)="onChangePage($event)"
+></ultimate-pagination>
