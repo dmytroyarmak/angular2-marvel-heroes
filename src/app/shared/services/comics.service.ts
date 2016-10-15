@@ -15,7 +15,7 @@ export class ComicsService {
 
   constructor(private http: Http) { }
 
-  getCharacter(id) {
+  getComic(id) {
     return this.http.get(ComicsService.COMICS_ENDPOINT + '/' + id, {
       search: this.getBaseSearchParams()
     }).map(responce => responce.json());
