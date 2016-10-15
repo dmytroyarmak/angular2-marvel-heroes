@@ -19,8 +19,8 @@ export class CharacterDetailsComponent implements OnInit {
     this.activatedRoute.params
       .map((params) => params['id'])
       .switchMap((characterId) => this.charactersService.getCharacter(characterId))
-      .subscribe((result) => {
-        this.character = result.data.results[0];
+      .subscribe((character) => {
+        this.character = character;
       })
   }
 

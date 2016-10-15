@@ -16,6 +16,7 @@ export class ComicPricesComponent implements OnInit {
   getPriceLabelByType(priceType: string) {
     switch (priceType) {
       case 'printPrice': return 'Print price';
+      case 'digitalPurchasePrice': 'Digital purchase price';
       default: return priceType;
     }
   }

@@ -19,6 +19,8 @@ export class LinksListComponent implements OnInit {
       case 'purchase': return 'Purchase';
       case 'reader': return 'Reader';
       case 'inAppLink': return 'In App Link';
+      case 'wiki': return 'Wiki';
+      case 'comiclink': return 'Comic Link';
       default: return linkType;
     }
   }

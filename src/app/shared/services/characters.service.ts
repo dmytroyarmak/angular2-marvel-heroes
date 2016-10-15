@@ -16,9 +16,12 @@ export class CharactersService {
   constructor(private http: Http) { }
 
   getCharacter(id) {
-    return this.http.get(CharactersService.CHARACTERS_ENDPOINT + '/' + id, {
-      search: this.getBaseSearchParams()
-    }).map(responce => responce.json());
+    return this.http
+      .get(CharactersService.CHARACTERS_ENDPOINT + '/' + id, {
+        search: this.getBaseSearchParams()
+      })
+      .map(responce => responce.json())
+      .map(body => body.data.results[0]);
   }
 
   getCharacters(options: IGetCharactersOptions) {
