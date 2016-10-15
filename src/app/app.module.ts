@@ -21,6 +21,7 @@ import { LinksListComponent } from './shared/components/links-list/links-list.co
 import { ComicPricesComponent } from './shared/components/comic-prices/comic-prices.component';
 import { ComicCreatorsComponent } from './shared/components/comic-creators/comic-creators.component';
 import { ComicVariantsComponent } from './shared/components/comic-variants/comic-variants.component';
+import { NavigationComponent } from './shared/components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ComicVariantsComponent } from './shared/components/comic-variants/comic
     LinksListComponent,
     ComicPricesComponent,
     ComicCreatorsComponent,
-    ComicVariantsComponent
+    ComicVariantsComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
