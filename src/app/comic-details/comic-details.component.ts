@@ -19,8 +19,8 @@ export class ComicDetailsComponent implements OnInit {
     this.activatedRoute.params
       .map((params) => params['id'])
       .switchMap((comicId) => this.comicsService.getComic(comicId))
-      .subscribe((result) => {
-        this.comic = result.data.results[0];
+      .subscribe((comic) => {
+        this.comic = comic;
       })
   }
 
