@@ -8,10 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AssociatedItemsComponent implements OnInit {
   @Input() title: string;
   @Input() collection: [any];
+  @Input() basePath: string;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  getRoutePath(item) {
+    return [this.basePath, this.getItemIdByResourceURI(item.resourceURI)];
+  }
+
+  getItemIdByResourceURI(resourceURI) {
+    return resourceURI.match(/\d+$/)[0];
+  }
 }
