@@ -2,7 +2,7 @@
   <h3>Prices</h3>
   <dl>
     <template ngFor let-priceItem [ngForOf]="prices">
-      <dt>{{getPriceLabelByType(priceItem.type)}}</dt><dd>{{priceItem.price | number:'1.2-3'}}</dd>
+      <dt>{{getPriceLabelByType(priceItem.type)}}</dt><dd>${{priceItem.price | number:'1.2-3'}}</dd>
     </template>
   </dl>
 </div>
