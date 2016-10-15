@@ -18,25 +18,21 @@
   </ul>
 
   <associated-items
-    *ngIf="character.comics.available"
     title="Comics"
     [collection]="character.comics"
   ></associated-items>
 
   <associated-items
-    *ngIf="character.series.available"
     title="Series"
     [collection]="character.series"
   ></associated-items>
 
   <associated-items
-    *ngIf="character.stories.available"
     title="Stories"
     [collection]="character.stories"
   ></associated-items>
 
   <associated-items
-    *ngIf="character.events.available"
     title="Events"
     [collection]="character.events"
   ></associated-items>
