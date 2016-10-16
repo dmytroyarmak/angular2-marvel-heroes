@@ -1,8 +1,8 @@
 <h2 class="mh-subtitle">Comics List</h2>
 
 <div class="mh-search-container">
-    <form (submit)="onSearch(titleInput.value)">
-        <input type="text" #titleInput [value]="titleStartsWith">
+    <form (submit)="onSearch(searchInput.value)">
+        <input type="text" #searchInput [value]="query">
         <button type="submit">Search</button>
     </form>
 </div>

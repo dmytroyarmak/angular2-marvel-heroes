@@ -8,7 +8,7 @@ import { CharactersService } from '../shared/services/characters.service';
 })
 export class CharactersListComponent implements OnInit {
   characters: any;
-  nameStartsWith = '';
+  query = '';
   currentPage: number = 1;
   itemsPerPage: number = 20;
 
@@ -32,16 +32,16 @@ export class CharactersListComponent implements OnInit {
   }
 
   onSearch(val) {
-    this.nameStartsWith = val;
+    this.query = val;
     this.loadCharactersList();
   }
 
   loadCharactersList() {
     this.charactersService
-      .getCharacters({
+      .getList({
         page: this.currentPage,
         perPage: this.itemsPerPage,
-        nameStartsWith: this.nameStartsWith
+        query: this.query
       })
       .subscribe((characters) => {
         this.characters = characters;

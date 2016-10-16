@@ -8,7 +8,7 @@ import { ComicsService } from '../shared/services/comics.service';
 })
 export class ComicsListComponent implements OnInit {
   comics: any;
-  titleStartsWith = '';
+  query = '';
   currentPage: number = 1;
   itemsPerPage: number = 20;
 
@@ -32,16 +32,16 @@ export class ComicsListComponent implements OnInit {
   }
 
   onSearch(val) {
-    this.titleStartsWith = val;
+    this.query = val;
     this.loadComicsList();
   }
 
   loadComicsList() {
     this.comicsService
-      .getComics({
+      .getList({
         page: this.currentPage,
         perPage: this.itemsPerPage,
-        titleStartsWith: this.titleStartsWith
+        query: this.query
       })
       .subscribe((comics) => {
         this.comics = comics;
