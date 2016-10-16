@@ -18,7 +18,7 @@ export class ComicDetailsComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params
       .map((params) => params['id'])
-      .switchMap((comicId) => this.comicsService.getComic(comicId))
+      .switchMap((comicId) => this.comicsService.get(comicId))
       .subscribe((comic) => {
         this.comic = comic;
       })
