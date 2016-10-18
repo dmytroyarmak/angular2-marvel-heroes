@@ -22,6 +22,9 @@ import { ComicPricesComponent } from './shared/components/comic-prices/comic-pri
 import { ComicCreatorsComponent } from './shared/components/comic-creators/comic-creators.component';
 import { ComicVariantsComponent } from './shared/components/comic-variants/comic-variants.component';
 import { NavigationComponent } from './shared/components/navigation/navigation.component';
+import { EntitiesListComponent } from './shared/components/entities-list/entities-list.component';
+import { EntitiesListItemComponent } from './shared/components/entities-list-item/entities-list-item.component';
+import { CreatorsListComponent } from './creators-list/creators-list.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
     ComicPricesComponent,
     ComicCreatorsComponent,
     ComicVariantsComponent,
-    NavigationComponent
+    NavigationComponent,
+    EntitiesListComponent,
+    EntitiesListItemComponent,
+    CreatorsListComponent
   ],
   imports: [
     BrowserModule,
