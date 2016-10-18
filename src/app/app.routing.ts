@@ -4,13 +4,15 @@ import { CharactersListComponent } from './characters-list/characters-list.compo
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { ComicsListComponent } from './comics-list/comics-list.component';
 import { ComicDetailsComponent } from './comic-details/comic-details.component';
+import { CreatorsListComponent } from './creators-list/creators-list.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/characters', pathMatch: 'full' },
   { path: 'characters', component: CharactersListComponent },
   { path: 'characters/:id', component: CharacterDetailsComponent },
   { path: 'comics', component: ComicsListComponent },
-  { path: 'comics/:id', component: ComicDetailsComponent }
+  { path: 'comics/:id', component: ComicDetailsComponent },
+  { path: 'creators', component: CreatorsListComponent }
 ];
 
 export const appRoutingProviders: any[] = [
