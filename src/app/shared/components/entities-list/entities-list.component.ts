@@ -32,6 +32,7 @@ export class EntitiesListComponent implements OnInit {
 
   onSearch(query) {
     this.query = query;
+    this.page = 1;
     this.loadEntitiesList();
   }
 
