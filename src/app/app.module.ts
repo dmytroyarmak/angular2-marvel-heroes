@@ -28,6 +28,7 @@ import { CreatorsListComponent } from './creators-list/creators-list.component';
 import { EventsListComponent } from './events-list/events-list.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { SeriesListComponent } from './series-list/series-list.component';
+import { SeriesDetailsComponent } from './series-details/series-details.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { SeriesListComponent } from './series-list/series-list.component';
     CreatorsListComponent,
     EventsListComponent,
     EventDetailsComponent,
-    SeriesListComponent
+    SeriesListComponent,
+    SeriesDetailsComponent
   ],
   imports: [
     BrowserModule,
