@@ -8,6 +8,7 @@ import { CreatorsListComponent } from './creators-list/creators-list.component';
 import { EventsListComponent } from './events-list/events-list.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { SeriesListComponent } from './series-list/series-list.component';
+import { SeriesDetailsComponent } from './series-details/series-details.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/characters', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
   { path: 'creators', component: CreatorsListComponent },
   { path: 'events', component: EventsListComponent },
   { path: 'events/:id', component: EventDetailsComponent },
-  { path: 'series', component: SeriesListComponent }
+  { path: 'series', component: SeriesListComponent },
+  { path: 'series/:id', component: SeriesDetailsComponent }
 ];
 
 export const appRoutingProviders: any[] = [
