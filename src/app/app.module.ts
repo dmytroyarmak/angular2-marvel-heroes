@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders} from './app.routing';
-import { CharactersService, ComicsService, EventsService, SeriesService } from './shared';
+import { CharactersService, ComicsService, CreatorsService, EventsService, SeriesService } from './shared';
 import { CharactersListComponent } from './characters-list/characters-list.component';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { CharactersListItemComponent } from './shared/components/characters-list-item/characters-list-item.component';
@@ -25,6 +25,7 @@ import { EntitiesListComponent } from './shared/components/entities-list/entitie
 import { EntitiesListItemComponent } from './shared/components/entities-list-item/entities-list-item.component';
 import { ItemNameComponent } from './shared/components/item-name/item-name.component';
 import { CreatorsListComponent } from './creators-list/creators-list.component';
+import { CreatorDetailsComponent } from './creator-details/creator-details.component';
 import { EventsListComponent } from './events-list/events-list.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { SeriesListComponent } from './series-list/series-list.component';
@@ -52,6 +53,7 @@ import { SeriesDetailsComponent } from './series-details/series-details.componen
     EntitiesListItemComponent,
     ItemNameComponent,
     CreatorsListComponent,
+    CreatorDetailsComponent,
     EventsListComponent,
     EventDetailsComponent,
     SeriesListComponent,
@@ -67,6 +69,7 @@ import { SeriesDetailsComponent } from './series-details/series-details.componen
     appRoutingProviders,
     CharactersService,
     ComicsService,
+    CreatorsService,
     EventsService,
     SeriesService
   ],
