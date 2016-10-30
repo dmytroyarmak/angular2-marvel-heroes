@@ -5,8 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders} from './app.routing';
-import { CharactersService } from './shared';
-import { ComicsService } from './shared';
+import { CharactersService, ComicsService, EventsService } from './shared';
 import { CharactersListComponent } from './characters-list/characters-list.component';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { CharactersListItemComponent } from './shared/components/characters-list-item/characters-list-item.component';
@@ -25,6 +24,7 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
 import { EntitiesListComponent } from './shared/components/entities-list/entities-list.component';
 import { EntitiesListItemComponent } from './shared/components/entities-list-item/entities-list-item.component';
 import { CreatorsListComponent } from './creators-list/creators-list.component';
+import { EventsListComponent } from './events-list/events-list.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,8 @@ import { CreatorsListComponent } from './creators-list/creators-list.component';
     NavigationComponent,
     EntitiesListComponent,
     EntitiesListItemComponent,
-    CreatorsListComponent
+    CreatorsListComponent,
+    EventsListComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +58,8 @@ import { CreatorsListComponent } from './creators-list/creators-list.component';
   providers: [
     appRoutingProviders,
     CharactersService,
-    ComicsService
+    ComicsService,
+    EventsService
   ],
   bootstrap: [AppComponent]
 })
