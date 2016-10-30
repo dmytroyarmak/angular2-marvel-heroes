@@ -6,6 +6,7 @@ import { ComicsListComponent } from './comics-list/comics-list.component';
 import { ComicDetailsComponent } from './comic-details/comic-details.component';
 import { CreatorsListComponent } from './creators-list/creators-list.component';
 import { EventsListComponent } from './events-list/events-list.component';
+import { EventDetailsComponent } from './event-details/event-details.component';
 import { SeriesListComponent } from './series-list/series-list.component';
 
 const appRoutes: Routes = [
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
   { path: 'comics/:id', component: ComicDetailsComponent },
   { path: 'creators', component: CreatorsListComponent },
   { path: 'events', component: EventsListComponent },
+  { path: 'events/:id', component: EventDetailsComponent },
   { path: 'series', component: SeriesListComponent }
 ];
 

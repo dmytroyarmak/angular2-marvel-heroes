@@ -23,8 +23,10 @@ import { ComicVariantsComponent } from './shared/components/comic-variants/comic
 import { NavigationComponent } from './shared/components/navigation/navigation.component';
 import { EntitiesListComponent } from './shared/components/entities-list/entities-list.component';
 import { EntitiesListItemComponent } from './shared/components/entities-list-item/entities-list-item.component';
+import { ItemNameComponent } from './shared/components/item-name/item-name.component';
 import { CreatorsListComponent } from './creators-list/creators-list.component';
 import { EventsListComponent } from './events-list/events-list.component';
+import { EventDetailsComponent } from './event-details/event-details.component';
 import { SeriesListComponent } from './series-list/series-list.component';
 
 @NgModule({
@@ -47,8 +49,10 @@ import { SeriesListComponent } from './series-list/series-list.component';
     NavigationComponent,
     EntitiesListComponent,
     EntitiesListItemComponent,
+    ItemNameComponent,
     CreatorsListComponent,
     EventsListComponent,
+    EventDetailsComponent,
     SeriesListComponent
   ],
   imports: [

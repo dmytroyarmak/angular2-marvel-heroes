@@ -1,0 +1,2 @@
+<a *ngIf="basePath" [routerLink]="getRoutePath()">{{item.name}}</a>
+<template [ngIf]="!basePath">{{item.name}}</template>

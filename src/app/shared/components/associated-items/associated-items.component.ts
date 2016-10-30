@@ -14,12 +14,4 @@ export class AssociatedItemsComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  getRoutePath(item) {
-    return [this.basePath, this.getItemIdByResourceURI(item.resourceURI)];
-  }
-
-  getItemIdByResourceURI(resourceURI) {
-    return resourceURI.match(/\d+$/)[0];
-  }
 }
