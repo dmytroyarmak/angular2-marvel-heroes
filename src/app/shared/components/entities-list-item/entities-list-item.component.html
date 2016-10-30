@@ -1,4 +1,4 @@
-<a [routerLink]="['/entitys', entity.id]" class="md-card">
+<a [routerLink]="entity.id" class="md-card">
   <h3>{{entity.name || entity.fullName || entity.title}}</h3>
   <mh-thumbnail
     *ngIf="entity.thumbnail"
