@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { EntitiesService } from '../../services/entities.service';
+
+import 'rxjs/add/operator/do';
 
 @Component({
   selector: 'mh-entities-list',
@@ -13,10 +16,28 @@ export class EntitiesListComponent implements OnInit {
   page: number = 1;
   perPage: number = 20;
 
-  constructor(private entitiesService: EntitiesService) { }
+  constructor(
+    private entitiesService: EntitiesService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit() {
-    this.loadEntitiesList();
+    this.activatedRoute.params
+      .do((params) => {
+        this.page = params['p'] ? parseInt(params['p'], 10) : 1;
+        this.query = params['q'] || '';
+      })
+      .switchMap(() => {
+        return this.entitiesService.getList({
+          page: this.page,
+          perPage: this.perPage,
+          query: this.query
+        });
+      })
+      .subscribe((entities) => {
+        this.entities = entities;
+      });;
   }
 
   getTotalPages() {
@@ -26,25 +47,13 @@ export class EntitiesListComponent implements OnInit {
   }
 
   onChangePage(newPage) {
-    this.page = newPage;
-    this.loadEntitiesList();
+    this.router.navigate([{
+      p: newPage,
+      q: this.query
+    }]);
   }
 
   onSearch(query) {
-    this.query = query;
-    this.page = 1;
-    this.loadEntitiesList();
-  }
-
-  loadEntitiesList() {
-    this.entitiesService
-      .getList({
-        page: this.page,
-        perPage: this.perPage,
-        query: this.query
-      })
-      .subscribe((entities) => {
-        this.entities = entities;
-      });
+    this.router.navigate([query ? {q: query} : {} ]);
   }
 }
