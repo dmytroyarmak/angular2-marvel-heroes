@@ -8,11 +8,9 @@ import { routing, appRoutingProviders} from './app.routing';
 import { CharactersService, ComicsService, CreatorsService, EventsService, SeriesService } from './shared';
 import { CharactersListComponent } from './characters-list/characters-list.component';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
-import { CharactersListItemComponent } from './shared/components/characters-list-item/characters-list-item.component';
 import { PaginationComponent } from './shared/components/pagination/pagination.component';
 import { AssociatedItemsComponent } from './shared/components/associated-items/associated-items.component';
 import { ComicsListComponent } from './comics-list/comics-list.component';
-import { ComicsListItemComponent } from './shared/components/comics-list-item/comics-list-item.component';
 import { ThumbnailComponent } from './shared/components/thumbnail/thumbnail.component';
 import { ComicDetailsComponent } from './comic-details/comic-details.component';
 import { ComicDatesComponent } from './shared/components/comic-dates/comic-dates.component';
@@ -35,13 +33,11 @@ import { SeriesDetailsComponent } from './series-details/series-details.componen
   declarations: [
     AppComponent,
     CharactersListComponent,
-    CharactersListItemComponent,
     CharacterDetailsComponent,
     PaginationComponent,
     ThumbnailComponent,
     AssociatedItemsComponent,
     ComicsListComponent,
-    ComicsListItemComponent,
     ComicDetailsComponent,
     ComicDatesComponent,
     LinksListComponent,
