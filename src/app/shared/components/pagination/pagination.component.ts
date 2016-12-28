@@ -30,4 +30,7 @@ export class PaginationComponent implements OnInit {
     }
   }
 
+  getItemKey(index, item) {
+    return item.key;
+  }
 }
