@@ -40,7 +40,7 @@ export class EntitiesListComponent implements OnInit {
       .subscribe((entities) => {
         this.isLoading = false;
         this.entities = entities;
-      });;
+      });
   }
 
   getTotalPages() {

@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./comic-variants.component.css']
 })
 export class ComicVariantsComponent implements OnInit {
-  @Input() variants: [any]
+  @Input() variants: [any];
 
   constructor() { }
 

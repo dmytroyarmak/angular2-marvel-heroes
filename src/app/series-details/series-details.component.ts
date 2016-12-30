@@ -21,7 +21,7 @@ export class SeriesDetailsComponent implements OnInit {
       .switchMap((seriesId) => this.seriesService.get(seriesId))
       .subscribe((series) => {
         this.series = series;
-      })
+      });
   }
 
 }
