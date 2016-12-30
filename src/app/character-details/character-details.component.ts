@@ -21,7 +21,7 @@ export class CharacterDetailsComponent implements OnInit {
       .switchMap((characterId) => this.charactersService.get(characterId))
       .subscribe((character) => {
         this.character = character;
-      })
+      });
   }
 
 }

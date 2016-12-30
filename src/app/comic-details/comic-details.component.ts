@@ -21,7 +21,7 @@ export class ComicDetailsComponent implements OnInit {
       .switchMap((comicId) => this.comicsService.get(comicId))
       .subscribe((comic) => {
         this.comic = comic;
-      })
+      });
   }
 
 }

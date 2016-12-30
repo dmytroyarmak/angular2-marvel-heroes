@@ -37,7 +37,7 @@ export class EntitiesListComponent implements OnInit {
       })
       .subscribe((entities) => {
         this.entities = entities;
-      });;
+      });
   }
 
   getTotalPages() {

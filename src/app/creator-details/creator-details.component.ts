@@ -21,7 +21,7 @@ export class CreatorDetailsComponent implements OnInit {
       .switchMap((creatorId) => this.creatorsService.get(creatorId))
       .subscribe((creator) => {
         this.creator = creator;
-      })
+      });
   }
 
 }
