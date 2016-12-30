@@ -15,6 +15,10 @@ export class ThumbnailComponent implements OnInit {
   }
 
   getThumbnailUrl() {
-    return `${this.image.path}.${this.image.extension}`;
+    return `${this.getThumbnailPathWithoutProtocol()}.${this.image.extension}`;
+  }
+
+  getThumbnailPathWithoutProtocol() {
+    return this.image.path.replace(/^https?:/, '');
   }
 }
