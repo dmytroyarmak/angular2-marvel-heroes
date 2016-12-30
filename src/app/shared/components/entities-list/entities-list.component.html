@@ -6,7 +6,12 @@
         <button type="submit">Search</button>
     </form>
 </div>
-<div *ngIf="entities" class="mh-cards-list">
+
+<div *ngIf="isLoading">
+    Loading...
+</div>
+
+<div *ngIf="entities && !isLoading" class="mh-cards-list">
     <mh-entities-list-item
         *ngFor="let entity of entities.data.results"
         [entity]="entity"

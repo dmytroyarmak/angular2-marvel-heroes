@@ -15,6 +15,7 @@ export class EntitiesListComponent implements OnInit {
   query: string = '';
   page: number = 1;
   perPage: number = 20;
+  isLoading: boolean = false;
 
   constructor(
     private entitiesService: EntitiesService,
@@ -29,6 +30,7 @@ export class EntitiesListComponent implements OnInit {
         this.query = params['q'] || '';
       })
       .switchMap(() => {
+        this.isLoading = true;
         return this.entitiesService.getList({
           page: this.page,
           perPage: this.perPage,
@@ -36,6 +38,7 @@ export class EntitiesListComponent implements OnInit {
         });
       })
       .subscribe((entities) => {
+        this.isLoading = false;
         this.entities = entities;
       });;
   }
