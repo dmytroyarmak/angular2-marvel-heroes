@@ -5,7 +5,7 @@ import { EntitiesService } from './entities.service';
 
 @Injectable()
 export class EventsService extends EntitiesService {
-  endpointUrl = 'http://gateway.marvel.com/v1/public/events';
+  endpointUrl = '//gateway.marvel.com/v1/public/events';
   searchParamName = 'nameStartsWith';
 
   constructor(http: Http) {

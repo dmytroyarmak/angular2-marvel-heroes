@@ -5,7 +5,7 @@ import { EntitiesService } from './entities.service';
 
 @Injectable()
 export class SeriesService extends EntitiesService {
-  endpointUrl = 'http://gateway.marvel.com/v1/public/series';
+  endpointUrl = '//gateway.marvel.com/v1/public/series';
   searchParamName = 'titleStartsWith';
 
   constructor(http: Http) {

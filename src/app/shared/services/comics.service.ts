@@ -7,7 +7,7 @@ import { isValidDate } from '../utils';
 
 @Injectable()
 export class ComicsService extends EntitiesService {
-  endpointUrl = 'http://gateway.marvel.com/v1/public/comics';
+  endpointUrl = '//gateway.marvel.com/v1/public/comics';
   searchParamName = 'titleStartsWith';
 
   constructor(http: Http) {
