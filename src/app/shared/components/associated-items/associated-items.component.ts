@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AssociatedItemsComponent implements OnInit {
   @Input() title: string;
-  @Input() collection: [any];
+  @Input() collection: any;
   @Input() basePath: string;
 
   constructor() { }

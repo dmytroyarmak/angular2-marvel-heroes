@@ -1,8 +1,8 @@
 <div *ngIf="prices?.length">
   <h3>Prices</h3>
   <dl>
-    <template ngFor let-priceItem [ngForOf]="prices">
+    <ng-container *ngFor="let priceItem of prices">
       <dt>{{getPriceLabelByType(priceItem.type)}}</dt><dd>${{priceItem.price | number:'1.2-3'}}</dd>
-    </template>
+    </ng-container>
   </dl>
 </div>

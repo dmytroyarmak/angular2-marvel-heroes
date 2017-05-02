@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./comic-creators.component.css']
 })
 export class ComicCreatorsComponent implements OnInit {
-  @Input() creators: [any];
+  @Input() creators: any;
 
   constructor() { }
 

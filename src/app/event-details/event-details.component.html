@@ -18,18 +18,18 @@
 
   <mh-links-list [links]="event.urls"></mh-links-list>
 
-  <template [ngIf]="event.start || event.end">
+  <ng-container *ngIf="event.start || event.end">
     <h3>Dates</h3>
     <dl>
       <dt>Start</dt><dd>{{event.start | date:'mediumDate'}}</dd>
       <dt>End</dt><dd>{{event.end | date:'mediumDate'}}</dd>
     </dl>
-  </template>
+  </ng-container>
 
-  <template [ngIf]="event.previous || event.next">
+  <ng-container *ngIf="event.previous || event.next">
     <h3>Related events</h3>
     <dl>
-      <template [ngIf]="event.previous">
+      <ng-container *ngIf="event.previous">
         <dt>Previous Event</dt>
         <dd>
           <mh-item-name
@@ -37,9 +37,9 @@
             [item]="event.previous"
           ></mh-item-name>
         </dd>
-      </template>
+      </ng-container>
 
-      <template [ngIf]="event.next">
+      <ng-container *ngIf="event.next">
         <dt>Next Event</dt>
         <dd>
           <mh-item-name
@@ -47,9 +47,9 @@
             [item]="event.next"
           ></mh-item-name>
         </dd>
-      </template>
+      </ng-container>
     </dl>
-  </template>
+  </ng-container>
 
   <mh-associated-items
     title="Creators"
